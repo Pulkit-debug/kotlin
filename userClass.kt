@@ -10,10 +10,16 @@
         println("Account no: ${account.accountNo}, Account Holder Name: ${account.name}, Account Holder Balance: ${account.accountMoney}")
         account.depositMoney(100f)
         account.withdrawMoney(99f)
+      println(  getUser("pulkit", {true}))
 
 
     }
 
+    // ************** Kotlin High Order Functions **********************
+
+    fun getUser(name: String, faltu:(working: Boolean) -> Unit): String {
+        return "username is $name"
+    }
 
     class Account {
         var accountNo: Int = 0
@@ -47,5 +53,8 @@
         fun getMoney() {
             println("Your currne balance is $accountMoney")
         }
+
+
+
 
     }
